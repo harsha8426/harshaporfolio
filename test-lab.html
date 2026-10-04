@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playwright Test Lab | NHV Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><span class="logo-bracket">&lt;</span>NHV<span class="logo-bracket">/&gt;</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="index.html#education" class="nav-link">Education</a></li>
+                <li><a href="test-lab.html" class="nav-link active">Test Lab</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <section class="section test-lab" id="test-lab" style="padding-top:120px;">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Playwright Test Lab</h2>
+                <div class="section-line"></div>
+                <p class="lab-subtitle">A comprehensive collection of HTML elements for Playwright automation testing &amp; demonstration</p>
+            </div>
+
+            <div class="lab-group animate-on-scroll">
+                <div class="lab-group-header"><i class="fas fa-keyboard"></i><h3>Text Inputs &amp; Fields</h3></div>
+                <div class="lab-grid">
+                    <div class="lab-field"><label for="tl-text" data-testid="label-text">Text</label><input type="text" id="tl-text" data-testid="input-text" placeholder="Enter text"></div>
+                    <div class="lab-field"><label for="tl-email" data-testid="label-email">Email</label><input type="email" id="tl-email" data-testid="input-email" placeholder="Enter email"></div>
+                    <div class="lab-field"><label for="tl-password" data-testid="label-password">Password</label><input type="password" id="tl-password" data-testid="input-password" placeholder="Enter password"></div>
+                    <div class="lab-field"><label for="tl-number" data-testid="label-number">Number</label><input type="number" id="tl-number" data-testid="input-number" placeholder="Enter number"></div>
+                    <div class="lab-field"><label for="tl-tel" data-testid="label-tel">Phone</label><input type="tel" id="tl-tel" data-testid="input-tel" placeholder="Enter phone"></div>
+                    <div class="lab-field"><label for="tl-url" data-testid="label-url">URL</label><input type="url" id="tl-url" data-testid="input-url" placeholder="Enter URL"></div>
+                    <div class="lab-field"><label for="tl-search" data-testid="label-search">Search</label><input type="search" id="tl-search" data-testid="input-search" placeholder="Search..."></div>
+                    <div class="lab-field lab-field-full"><label for="tl-textarea" data-testid="label-textarea">Message</label><textarea id="tl-textarea" data-testid="textarea-message" placeholder="Enter message" rows="4"></textarea></div>
+                </div>
+            </div>
+
+            <div class="lab-group animate-on-scroll">
+                <div class="lab-group-header"><i class="fas fa-toggle-on"></i><h3>Selection &amp; Toggle Elements</h3></div>
+                <div class="lab-grid">
+                    <div class="lab-field lab-field-inline"><input type="checkbox" id="tl-agree" data-testid="checkbox-agree"><label for="tl-agree" data-testid="label-agree">I agree to terms</label></div>
+                    <div class="lab-field lab-field-inline"><input type="checkbox" id="tl-newsletter" data-testid="checkbox-newsletter" checked><label for="tl-newsletter" data-testid="label-newsletter">Subscribe to newsletter</label></div>
+                    <div class="lab-field lab-field-full">
+                        <fieldset data-testid="fieldset-group" class="lab-fieldset">
+                            <legend data-testid="legend-text">Select Plan</legend>
+                            <div class="lab-radio-group">
+                                <div class="lab-field-inline"><input type="radio" name="plan" id="tl-basic" data-testid="radio-basic" value="basic"><label for="tl-basic" data-testid="label-basic">Basic</label></div>
+                                <div class="lab-field-inline"><input type="radio" name="plan" id="tl-pro" data-testid="radio-pro" value="pro"><label for="tl-pro" data-testid="label-pro">Pro</label></div>
+                                <div class="lab-field-inline"><input type="radio" name="plan" id="tl-enterprise" data-testid="radio-enterprise" value="enterprise"><label for="tl-enterprise" data-testid="label-enterprise">Enterprise</label></div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="lab-field"><label for="tl-country" data-testid="label-country">Country</label><select id="tl-country" data-testid="select-country"><option value="">Select Country</option><option value="india">India</option><option value="usa">USA</option><option value="uk">UK</option><option value="australia">Australia</option></select></div>
+                    <div class="lab-field"><label for="tl-skills" data-testid="label-skills">Skills (Multi)</label><select id="tl-skills" data-testid="select-skills" multiple><option value="playwright">Playwright</option><option value="selenium">Selenium</option><option value="cypress">Cypress</option><option value="jira">JIRA</option><option value="sql">SQL</option></select></div>
+                    <div class="lab-field"><label for="tl-range" data-testid="label-range">Range</label><input type="range" id="tl-range" data-testid="input-range" min="0" max="100" value="50"></div>
+                    <div class="lab-field"><label for="tl-color" data-testid="label-color">Color Picker</label><input type="color" id="tl-color" data-testid="input-color" value="#00d4ff"></div>
+                </div>
+            </div>
+
+            <div class="lab-group animate-on-scroll">
+                <div class="lab-group-header"><i class="fas fa-calendar"></i><h3>Date &amp; Time Inputs</h3></div>
+                <div class="lab-grid">
+                    <div class="lab-field"><label>Date</label><input type="date" data-testid="input-date"></div>
+                    <div class="lab-field"><label>Time</label><input type="time" data-testid="input-time"></div>
+                    <div class="lab-field"><label>DateTime</label><input type="datetime-local" data-testid="input-datetime"></div>
+                    <div class="lab-field"><label>Month</label><input type="month" data-testid="input-month"></div>
+                    <div class="lab-field"><label>Week</label><input type="week" data-testid="input-week"></div>
+                </div>
+            </div>
+
+            <div class="lab-group animate-on-scroll">
+                <div class="lab-group-header"><i class="fas fa-mouse-pointer"></i><h3>Buttons &amp; Actions</h3></div>
+                <div class="lab-btn-grid">
+                    <button type="button" class="lab-btn" data-testid="btn-primary">Primary Action</button>
+                    <button type="submit" class="lab-btn" data-testid="btn-submit">Submit Form</button>
+                    <button type="reset" class="lab-btn" data-testid="btn-reset">Reset Form</button>
+                    <button disabled class="lab-btn lab-btn-disabled" data-testid="btn-disabled">Disabled Button</button>
+                    <input type="button" class="lab-btn" data-testid="input-btn" value="Input Button">
+                    <input type="submit" class="lab-btn" data-testid="input-submit" value="Input Submit">
+                    <a href="#test-lab" class="lab-btn lab-btn-link" data-testid="link-anchor">Anchor Link</a>
+                    <a href="https://playwright.dev" target="_blank" class="lab-btn lab-btn-link" data-testid="link-external">External Link <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="lab-group animate-on-scroll">
+                <div class="lab-group-header"><i class="fas fa-font"></i><h3>Display &amp; Content Elements</h3></div>
+                <div class="lab-content-display">
+                    <p data-testid="text-paragraph">This is a sample paragraph for text assertion.</p>
+                    <h1 data-testid="heading-h1">Heading 1</h1>
+                    <h2 data-testid="heading-h2">Heading 2</h2>
+                    <h3 data-testid="heading-h3">Heading 3</h3>
+                    <h4 data-testid="heading-h4">Heading 4</h4>
+                    <h5 data-testid="heading-h5">Heading 5</h5>
+                    <h6 data-testid="heading-h6">Heading 6</h6>
+                    <div class="lab-inline-elements"><span data-testid="text-span">Inline span text</span><strong data-testid="text-strong">Bold text</strong><em data-testid="text-em">Italic text</em><code data-testid="text-code">const x = 42;</code></div>
+                    <pre data-testid="text-pre" class="lab-pre">function hello() {
+  console.log('world');
+  return true;
+}</pre>
+                    <blockquote data-testid="text-blockquote" class="lab-blockquote">Quality is never an accident.</blockquote>
+                    <div class="lab-lists">
+                        <ul data-testid="list-unordered"><li data-testid="list-item-1">Item One</li><li data-testid="list-item-2">Item Two</li><li data-testid="list-item-3">Item Three</li></ul>
+                        <ol data-testid="list-ordered"><li data-testid="ordered-item-1">First</li><li data-testid="ordered-item-2">Second</li><li data-testid="ordered-item-3">Third</li></ol>
+                    </div>
+                    <div class="lab-table-wrap">
+                        <table data-testid="table-data" class="lab-table">
+                            <thead><tr><th>Name</th><th>Role</th><th>Status</th></tr></thead>
+                            <tbody>
+                                <tr data-testid="table-row-1"><td data-testid="cell-name-1">Harsha</td><td data-testid="cell-role-1">QA Automation Engineer/SDET</td><td data-testid="cell-status-1"><span class="lab-status active">Active</span></td></tr>
+                                <tr data-testid="table-row-2"><td data-testid="cell-name-2">Ravi</td><td data-testid="cell-role-2">Developer</td><td data-testid="cell-status-2"><span class="lab-status active">Active</span></td></tr>
+                                <tr data-testid="table-row-3"><td data-testid="cell-name-3">Priya</td><td data-testid="cell-role-3">Designer</td><td data-testid="cell-status-3"><span class="lab-status away">On Leave</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="lab-media">
+                        <img data-testid="img-avatar" src="https://via.placeholder.com/100" alt="Avatar">
+                        <figure data-testid="figure-main"><img src="https://via.placeholder.com/200x120" alt="Figure"><figcaption data-testid="figcaption-text">Sample figure caption</figcaption></figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lab-group animate-on-scroll">
+                <div class="lab-group-header"><i class="fas fa-cogs"></i><h3>Interactive &amp; Structural Elements</h3></div>
+                <div class="lab-interactive">
+                    <details data-testid="details-faq" class="lab-details"><summary data-testid="summary-faq">FAQ: What browsers does Playwright support?</summary><p>Playwright supports all major browsers.</p></details>
+                    <div class="lab-dialog-section">
+                        <button type="button" class="lab-btn" data-testid="btn-open-dialog" onclick="document.getElementById('testDialog').showModal()">Open Dialog</button>
+                        <dialog id="testDialog" data-testid="dialog-modal" class="lab-dialog"><p data-testid="dialog-content">This is a modal dialog for testing.</p><button class="lab-btn" data-testid="btn-close-dialog" onclick="document.getElementById('testDialog').close()">Close</button></dialog>
+                    </div>
+                    <div class="lab-meters">
+                        <div class="lab-field"><label>Progress (70/100)</label><progress data-testid="progress-bar" value="70" max="100"></progress></div>
+                        <div class="lab-field"><label>Meter (0.75)</label><meter data-testid="meter-score" value="0.75" min="0" max="1"></meter></div>
+                        <div class="lab-field"><label>Output</label><output data-testid="output-result">Result: 42</output></div>
+                    </div>
+                    <div class="lab-embeds"><iframe data-testid="iframe-embed" src="about:blank" title="Embedded Frame" width="300" height="150"></iframe><canvas data-testid="canvas-draw" width="200" height="100"></canvas></div>
+                    <div class="lab-media-players"><video data-testid="video-player" controls width="300"><source src="placeholder.mp4" type="video/mp4"></video><audio data-testid="audio-player" controls><source src="placeholder.mp3" type="audio/mpeg"></audio></div>
+                    <div class="lab-editable-group">
+                        <div contenteditable="true" data-testid="div-editable" class="lab-editable">Click to edit this text</div>
+                        <div tabindex="0" data-testid="div-focusable" class="lab-focusable">Focusable div</div>
+                        <div role="alert" data-testid="div-alert" class="lab-alert">This is an alert message</div>
+                        <div role="tooltip" data-testid="div-tooltip" class="lab-tooltip-el">Tooltip text here</div>
+                    </div>
+                    <nav data-testid="nav-secondary" class="lab-nav"><a href="#" data-testid="nav-link-1">Link 1</a><a href="#" data-testid="nav-link-2">Link 2</a><a href="#" data-testid="nav-link-3">Link 3</a></nav>
+                    <form data-testid="form-test" class="lab-form" onsubmit="event.preventDefault(); document.getElementById('formStatus').textContent='Submitted';"><input type="text" data-testid="form-input-name" placeholder="Name"><input type="email" data-testid="form-input-email" placeholder="Email"><button type="submit" class="lab-btn" data-testid="form-btn-submit">Submit</button><span data-testid="form-status" id="formStatus" class="lab-form-status"></span></form>
+                    <input type="hidden" data-testid="input-hidden" value="hidden-value-123">
+                    <div class="lab-field"><label>File Upload</label><input type="file" data-testid="input-file" accept=".pdf,.png,.jpg"></div>
+                    <input type="image" data-testid="input-image" src="https://via.placeholder.com/50" alt="Image submit">
+                    <div class="lab-field lab-field-inline"><input type="checkbox" id="tl-indeterminate" data-testid="checkbox-indeterminate"><label for="tl-indeterminate" data-testid="label-indeterminate">Indeterminate</label></div>
+                </div>
+            </div>
+
+            <div class="lab-group animate-on-scroll">
+                <div class="lab-group-header"><i class="fas fa-code"></i><h3>Playwright Test Script</h3></div>
+                <div class="lab-code-window">
+                    <div class="code-header"><div class="code-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="code-title">portfolio.spec.ts</span></div>
+                    <pre data-testid="playwright-sample-script" class="lab-script"><code>import { test, expect, Page } from '@playwright/test';
+
+test.describe('Portfolio Element Coverage', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/test-lab.html');
+    await page.waitForLoadState('domcontentloaded');
+  });
+
+  test('text inputs', async ({ page }) => {
+    await page.getByTestId('input-text').fill('Hello Playwright');
+    await expect(page.getByTestId('input-text')).toHaveValue('Hello Playwright');
+  });
+
+  test('checkboxes', async ({ page }) => {
+    await page.getByTestId('checkbox-agree').check();
+    await expect(page.getByTestId('checkbox-agree')).toBeChecked();
+  });
+
+  test('select dropdown', async ({ page }) => {
+    await page.getByTestId('select-country').selectOption('india');
+    await expect(page.getByTestId('select-country')).toHaveValue('india');
+  });
+
+  test('buttons', async ({ page }) => {
+    await expect(page.getByTestId('btn-disabled')).toBeDisabled();
+    await expect(page.getByTestId('btn-primary')).toBeEnabled();
+  });
+
+  test('dialog', async ({ page }) => {
+    await page.getByTestId('btn-open-dialog').click();
+    await expect(page.getByTestId('dialog-modal')).toBeVisible();
+    await page.getByTestId('btn-close-dialog').click();
+  });
+
+  test('table', async ({ page }) => {
+    await expect(page.getByTestId('cell-name-1')).toHaveText('Harsha');
+    await expect(page.getByTestId('cell-role-1')).toHaveText('QA Automation Engineer/SDET');
+    const rows = page.locator('[data-testid="table-data"] tbody tr');
+    await expect(rows).toHaveCount(3);
+  });
+
+  test('form submission', async ({ page }) => {
+    await page.getByTestId('form-input-name').fill('Test User');
+    await page.getByTestId('form-btn-submit').click();
+    await expect(page.getByTestId('form-status')).toHaveText('Submitted');
+  });
+});</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><span class="logo-bracket">&lt;</span>NHV<span class="logo-bracket">/&gt;</span></div>
+                <nav class="footer-nav"><a href="index.html">Home</a><a href="index.html#skills">Skills</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a></nav>
+                <div class="footer-social">
+                    <a href="mailto:niddanaharshavardhan@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 Niddana Harsha Vardhan. Crafted with <span class="heart">&hearts;</span> and code.</p></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Reveal all animated elements on this page immediately after observer setup
+        setTimeout(() => {
+            document.querySelectorAll('.animate-on-scroll').forEach(el => el.classList.add('visible'));
+        }, 100);
+        // Indeterminate checkbox
+        const cb = document.getElementById('tl-indeterminate');
+        if (cb) cb.indeterminate = true;
+    </script>
+</body>
+</html>

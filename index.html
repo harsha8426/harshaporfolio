@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niddana Harsha Vardhan | QA Automation Engineer/SDET</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo"><span class="logo-bracket">&lt;</span>NHV<span class="logo-bracket">/&gt;</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="test-lab.html" class="nav-link">Test Lab</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-name animate-on-scroll">
+                <span class="hero-greeting">Hello, I'm</span>
+                <span class="hero-title-name">Niddana Harsha<br>Vardhan</span>
+            </h1>
+            <div class="hero-role animate-on-scroll">
+                <span class="role-prefix">// </span>
+                <span class="typewriter" id="typewriter"></span><span class="cursor-blink">|</span>
+            </div>
+            <p class="hero-description animate-on-scroll">
+                QA Automation Engineer/SDET with <span class="highlight">5+ years of total IT experience</span>,
+                including <span class="highlight">4+ years of software QA experience</span> across automation,
+                software testing, and data validation.
+            </p>
+            <div class="hero-cta animate-on-scroll">
+                <a href="#contact" class="btn btn-primary"><span>Get In Touch</span><i class="fas fa-arrow-right"></i></a>
+                <a href="#experience" class="btn btn-outline"><span>View My Work</span><i class="fas fa-chevron-down"></i></a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window animate-on-scroll">
+                <div class="code-header">
+                    <div class="code-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+                    <span class="code-title">api.spec.ts</span>
+                </div>
+                <pre class="code-body"><code><span class="code-keyword">import</span> { <span class="code-var">test</span>, <span class="code-var">expect</span>, <span class="code-keyword">type</span> <span class="code-var">APIRequestContext</span> }
+  <span class="code-keyword">from</span> <span class="code-string">'@playwright/test'</span>;
+
+<span class="code-keyword">async function</span> <span class="code-var">validateResponse</span>(request: <span class="code-var">APIRequestContext</span>) {
+  <span class="code-keyword">const</span> <span class="code-var">response</span> = <span class="code-keyword">await</span> request.get(<span class="code-string">'/api/status'</span>);
+  expect(response.ok()).toBeTruthy();
+}
+
+<span class="code-keyword">test</span>(<span class="code-string">'validate API response'</span>, <span class="code-keyword">async</span> ({ <span class="code-var">request</span> }) =&gt; {
+  <span class="code-keyword">await</span> validateResponse(request);
+});</code></pre>
+            </div>
+        </div>
+        <div class="scroll-indicator"><div class="mouse"><div class="mouse-wheel"></div></div><span>Scroll Down</span></div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text animate-on-scroll">
+                    <p class="about-intro">I'm a <span class="highlight">QA Automation Engineer/SDET</span> with 5+ years of total IT experience and 4+ years of software QA experience.</p>
+                    <p>I work with Playwright, TypeScript, JavaScript, Node.js, npm, Page Object Model (POM), data-driven testing, and Playwright APIRequestContext.</p>
+                    <p>My QA work covers functional, smoke, regression, integration, system, negative, and boundary testing, together with data and schema validation.</p>
+                    <div class="about-info-grid">
+                        <div class="info-item"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Visakhapatnam</span></div>
+                        <div class="info-item"><i class="fas fa-user-gear" aria-hidden="true"></i><span>QA Automation Engineer/SDET</span></div>
+                        <div class="info-item"><i class="fas fa-briefcase" aria-hidden="true"></i><span>5+ years of total IT experience</span></div>
+                        <div class="info-item"><i class="fas fa-vial-circle-check" aria-hidden="true"></i><span>4+ years of software QA experience</span></div>
+                    </div>
+                </div>
+                <div class="about-visual animate-on-scroll">
+                    <div class="tech-orbit">
+                        <div class="orbit-center"><i class="fas fa-vial"></i><span>QA</span></div>
+                        <div class="orbit-ring ring-1">
+                            <div class="orbit-item" style="--angle:0deg"><span>Playwright</span></div>
+                            <div class="orbit-item" style="--angle:120deg"><span>SQL</span></div>
+                            <div class="orbit-item" style="--angle:240deg"><span>TypeScript</span></div>
+                        </div>
+                        <div class="orbit-ring ring-2">
+                            <div class="orbit-item" style="--angle:60deg"><span>Jira</span></div>
+                            <div class="orbit-item" style="--angle:180deg"><span>ETL</span></div>
+                            <div class="orbit-item" style="--angle:300deg"><span>Data Fabric</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Technical Arsenal</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card animate-on-scroll" data-skill-group="automation" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Automation</h3>
+                    <div class="skill-tags"><span class="skill-tag">Playwright</span><span class="skill-tag">TypeScript</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Node.js</span><span class="skill-tag">npm</span><span class="skill-tag">Page Object Model (POM)</span><span class="skill-tag">data-driven testing</span><span class="skill-tag">Playwright APIRequestContext</span></div>
+                </div>
+                <div class="skill-card animate-on-scroll" data-skill-group="qualityAssurance" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>Quality Assurance</h3>
+                    <div class="skill-tags"><span class="skill-tag">functional testing</span><span class="skill-tag">smoke testing</span><span class="skill-tag">regression testing</span><span class="skill-tag">integration testing</span><span class="skill-tag">system testing</span><span class="skill-tag">negative testing</span><span class="skill-tag">boundary testing</span><span class="skill-tag">data validation</span><span class="skill-tag">schema validation</span></div>
+                </div>
+                <div class="skill-card animate-on-scroll" data-skill-group="dataAndEtl" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data &amp; ETL</h3>
+                    <div class="skill-tags"><span class="skill-tag">Apache Hop</span><span class="skill-tag">Infor Data Fabric ETL Tool</span><span class="skill-tag">Data Lake</span><span class="skill-tag">Compass</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">SQL</span><span class="skill-tag">DB2</span><span class="skill-tag">DB2/400</span><span class="skill-tag">Oracle</span><span class="skill-tag">source-to-target validation</span></div>
+                </div>
+                <div class="skill-card animate-on-scroll" data-skill-group="executionDeliveryReporting" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon"><i class="fas fa-gears"></i></div>
+                    <h3>Execution, Delivery &amp; Reporting</h3>
+                    <div class="skill-tags"><span class="skill-tag">GitLab CI/CD</span><span class="skill-tag">Playwright sharding</span><span class="skill-tag">Chromium</span><span class="skill-tag">blob reports</span><span class="skill-tag">HTML reports</span><span class="skill-tag">JUnit reports</span><span class="skill-tag">AWS S3</span></div>
+                </div>
+                <div class="skill-card animate-on-scroll" data-skill-group="toolsAndPlatforms" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon"><i class="fas fa-toolbox"></i></div>
+                    <h3>Tools &amp; Platforms</h3>
+                    <div class="skill-tags"><span class="skill-tag">Jira</span><span class="skill-tag">Zephyr Scale</span><span class="skill-tag">Infor OS</span><span class="skill-tag">Data Fabric</span><span class="skill-tag">Data Catalog</span><span class="skill-tag">Enterprise Graph</span><span class="skill-tag">IEG</span><span class="skill-tag">Mingle</span><span class="skill-tag">ION API Gateway</span></div>
+                </div>
+                <div class="skill-card animate-on-scroll" data-skill-group="formatsAndMetadata" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon"><i class="fas fa-file-code"></i></div>
+                    <h3>Formats &amp; Metadata Validation</h3>
+                    <div class="skill-tags"><span class="skill-tag">JSON</span><span class="skill-tag">NDJSON</span><span class="skill-tag">XML</span><span class="skill-tag">XSD</span><span class="skill-tag">CSV</span><span class="skill-tag">DSV</span><span class="skill-tag">ZIP</span><span class="skill-tag">schema metadata</span><span class="skill-tag">encoding validation</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Career Journey</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-item animate-on-scroll" data-employment-id="infor-current" data-employer="infor">
+                    <div class="timeline-dot"><div class="dot-pulse"></div></div>
+                    <div class="timeline-card">
+                        <div class="timeline-badge current">Current</div>
+                        <h3>Senior Quality Assurance Analyst</h3>
+                        <h4><span class="timeline-employer">Infor India Pvt. Ltd.</span> — <span class="timeline-location">Hyderabad</span></h4>
+                        <span class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> November 2021–Present</span>
+                        <div class="timeline-responsibility-groups">
+                            <div class="timeline-responsibility-group">
+                                <h5 class="timeline-responsibility-heading">Automation</h5>
+                                <ul class="timeline-responsibility-list">
+                                    <li data-responsibility-id="playwright-automation">Build and maintain Playwright automation in TypeScript and JavaScript on Node.js with npm, structured on the Page Object Model (POM), covering data-driven testing and API checks through Playwright APIRequestContext.</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-responsibility-group">
+                                <h5 class="timeline-responsibility-heading">QA coverage</h5>
+                                <ul class="timeline-responsibility-list">
+                                    <li data-responsibility-id="qa-validation-coverage">Perform functional testing, smoke testing, regression testing, integration testing, system testing, negative testing, and boundary testing, together with data validation and schema validation.</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-responsibility-group">
+                                <h5 class="timeline-responsibility-heading">ETL validation</h5>
+                                <ul class="timeline-responsibility-list">
+                                    <li data-responsibility-id="etl-and-source-to-target-validation">Validate ETL flows built with Apache Hop and the Infor Data Fabric ETL Tool across Data Lake and Compass, running source-to-target validation with SQL against PostgreSQL, DB2, DB2/400, and Oracle.</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-responsibility-group">
+                                <h5 class="timeline-responsibility-heading">Execution &amp; reporting</h5>
+                                <ul class="timeline-responsibility-list">
+                                    <li data-responsibility-id="gitlab-execution-and-reporting">Run suites through GitLab CI/CD using Playwright sharding on Chromium, merging blob reports into HTML reports and JUnit reports and publishing results to AWS S3.</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-responsibility-group">
+                                <h5 class="timeline-responsibility-heading">Test management &amp; Infor platforms</h5>
+                                <ul class="timeline-responsibility-list">
+                                    <li data-responsibility-id="test-management-and-infor-platforms">Manage test cases and defects in Jira and Zephyr Scale while validating Infor OS, Data Fabric, Mingle, and the ION API Gateway.</li>
+                                    <li data-responsibility-id="data-catalog-workflow-validation">Validate Data Catalog workflows.</li>
+                                    <li data-responsibility-id="enterprise-graph-validation">Validate Enterprise Graph and IEG graph relationships.</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-responsibility-group">
+                                <h5 class="timeline-responsibility-heading">Formats, metadata &amp; encoding</h5>
+                                <ul class="timeline-responsibility-list">
+                                    <li data-responsibility-id="format-metadata-and-encoding-validation">Validate JSON, NDJSON, XML, XSD, CSV, DSV, and ZIP payloads, including schema metadata and encoding validation.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll" data-employment-id="hcl-prior" data-employer="hcl">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <h3>Associate—SCM Administration</h3>
+                        <h4><span class="timeline-employer">HCL Technologies</span> — <span class="timeline-location">Chennai</span></h4>
+                        <span class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> December 2020–November 2021</span>
+                        <div class="timeline-responsibility-group">
+                            <ul class="timeline-responsibility-list">
+                                <li data-responsibility-id="application-package-deployment">Created and deployed application packages.</li>
+                                <li data-responsibility-id="windows-update-and-patching-support">Supported Windows update and patching activity.</li>
+                                <li data-responsibility-id="active-directory-and-servicenow-operations">Handled Active Directory and ServiceNow (SNOW) operational tasks.</li>
+                                <li data-responsibility-id="vulnerability-management-support">Supported vulnerability management.</li>
+                                <li data-responsibility-id="deployment-and-system-issue-investigation">Investigated deployment and system issues.</li>
+                                <li data-responsibility-id="support-team-coordination">Coordinated with support teams during investigation and resolution.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Education</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-grid">
+                <div class="edu-card animate-on-scroll">
+                    <div class="edu-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
+                    <div class="edu-content">
+                        <h3>B.Tech EEE</h3>
+                        <h4>Vignan's Institute of Information Technology</h4>
+                        <span class="edu-date">01/2016–12/2020</span>
+                        <div class="edu-score"><span class="score-label">CGPA</span><span class="score-value">7.8</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Get in touch</h3>
+                    <p>Use the contact details below to discuss software quality, automation, or data validation.</p>
+                    <div class="contact-links">
+                        <a href="mailto:niddanaharshavardhan@gmail.com" class="contact-link-item"><div class="contact-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div><div><span class="contact-label">Email</span><span class="contact-value">niddanaharshavardhan@gmail.com</span></div></a>
+                        <a href="tel:+919490312456" class="contact-link-item"><div class="contact-icon" aria-hidden="true"><i class="fas fa-phone"></i></div><div><span class="contact-label">Phone</span><span class="contact-value">+91 9490312456</span></div></a>
+                        <div class="contact-link-item"><div class="contact-icon" aria-hidden="true"><i class="fab fa-linkedin"></i></div><div><span class="contact-label">LinkedIn</span><span class="contact-value">@harsha1919</span></div></div>
+                        <div class="contact-link-item"><div class="contact-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div><div><span class="contact-label">Location</span><span class="contact-value">Visakhapatnam</span></div></div>
+                    </div>
+                </div>
+                <form class="contact-form animate-on-scroll" id="contactForm">
+                    <div class="form-group"><input type="text" id="name" required placeholder=" "><label for="name">Your Name</label><div class="form-line"></div></div>
+                    <div class="form-group"><input type="email" id="email" required placeholder=" "><label for="email">Your Email</label><div class="form-line"></div></div>
+                    <div class="form-group"><textarea id="message" rows="4" required placeholder=" "></textarea><label for="message">Your Message</label><div class="form-line"></div></div>
+                    <button type="submit" class="btn btn-primary btn-submit"><span>Send Message</span><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><span class="logo-bracket">&lt;</span>NHV<span class="logo-bracket">/&gt;</span></div>
+                <nav class="footer-nav"><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+                <div class="footer-social">
+                    <a href="mailto:niddanaharshavardhan@gmail.com" aria-label="Email Niddana Harsha Vardhan"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 Niddana Harsha Vardhan. Crafted with <span class="heart">&hearts;</span> and code.</p></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
