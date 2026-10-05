@@ -74,18 +74,18 @@ Update the dependency-free static portfolio in place using the completed résum�
     - Exercise initializers with typewriter, hero stats, and contact form both present and absent; assert no missing-node error and unchanged Test Lab selectors, row count, form result, dialog, and indeterminate-checkbox behavior.
     - _Requirements: 8.5, 8.9, 8.10, 9.10, 9.11_
 
-- [ ] 4. Preserve responsive presentation and wire the updated markup
-  - [-] 4.1 Add only component-scoped responsive rules to `styles.css`
+- [x] 4. Preserve responsive presentation and wire the updated markup
+  - [x] 4.1 Add only component-scoped responsive rules to `styles.css`
     - Style semantic responsibility groups and static contact rows using existing variables and breakpoints; allow long labels and timeline metadata to wrap, use two columns only where space permits, collapse by `768px`, and prevent narrow-screen hover translation or horizontal overflow.
     - Retain existing typography, gradients, spacing, card treatments, animations, auto-flow grids, and anchor focus affordances; ensure non-clickable LinkedIn content has no link-like cursor, transform, or focus treatment.
     - _Requirements: 8.6–8.8, 9.8_
 
-  - [ ] 4.2 Reconcile HTML, CSS, and JavaScript hooks across both pages
+  - [x] 4.2 Reconcile HTML, CSS, and JavaScript hooks across both pages
     - Wire the new semantic content to existing classes and guarded initializers, remove only selectors/hooks orphaned by deleted metrics, progress bars, duplicate cards, or social actions, and keep script inclusion, section IDs, local destinations, accessible labels, and remaining interaction contracts intact.
     - Correct any duplicate IDs or invalid anchor nesting introduced or exposed by consolidation without redesigning either page.
     - _Requirements: 8.1, 8.2, 8.6–8.10, 9.12_
 
-- [ ] 5. Checkpoint - Ensure all tests pass
+- [x] 5. Checkpoint - Ensure all tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
 - [ ] 6. Add cross-file property and integration coverage
@@ -133,13 +133,13 @@ Update the dependency-free static portfolio in place using the completed résum�
     - Run the aggregate validator against the completed `index.html`, `test-lab.html`, and `script.js`, require zero violations, and print actionable file/location diagnostics plus provenance references on failure.
     - _Requirements: 9.1–9.7, 9.12_
 
-- [ ] 7. Add automated browser smoke coverage
-  - [ ]* 7.1 Write desktop/mobile browser smoke checks for both pages
+- [x] 7. Add automated browser smoke coverage
+  - [x]* 7.1 Write desktop/mobile browser smoke checks for both pages
     - Using only the validation environment’s supplied browser runner, load `index.html` and `test-lab.html` at `1280 × 720` and `390 × 844`; assert recognizable section/card layout, wrapping without horizontal overflow or clipping, working desktop/mobile local navigation, exact actionable email/phone links, and non-focusable/non-clickable LinkedIn content.
     - Exercise contact-form feedback and all Test Lab outcomes/selectors, collect page and console errors throughout, and fail on any new résumé-update runtime error; do not add a project dependency or alter production behavior for the tests.
     - _Requirements: 8.6–8.10, 9.8–9.12_
 
-- [ ] 8. Final checkpoint - Complete required résumé and release validation
+- [x] 8. Final checkpoint - Complete required résumé and release validation
   - Verify every retained personal/professional statement and employer responsibility has a source reference to the supplied résumé; if the source is unavailable or a fact cannot be traced, stop and obtain clarification rather than infer content.
   - Run the aggregate static-content and markup check, or an equivalent repeatable inspection if optional test tooling was skipped, across `index.html`, `test-lab.html`, and `script.js`; require exact canonical values and contact URIs, full skill coverage, valid markup/navigation, and zero placeholders, unsupported claims/actions, duplicate canonical records, or cross-employer attributions.
   - Run the required browser smoke check on both pages at `1280 × 720` and `390 × 844`; confirm exact actionable email/phone links, static LinkedIn semantics, preserved layout/navigation/Test Lab behavior, and zero new console errors.

@@ -47,9 +47,6 @@ body:hover .cursor-glow { opacity: 1; }
 
 /* ===== Hero ===== */
 .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 60px; padding: 120px 24px 80px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
-.hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); border-radius: 50px; font-size: 0.85rem; color: var(--accent); margin-bottom: 24px; }
-.badge-dot { width: 8px; height: 8px; background: #00ff88; border-radius: 50%; animation: pulse-dot 2s infinite; }
-@keyframes pulse-dot { 0%,100% { box-shadow: 0 0 0 0 rgba(0,255,136,0.4); } 50% { box-shadow: 0 0 0 8px rgba(0,255,136,0); } }
 .hero-greeting { display: block; font-size: 1.1rem; font-weight: 400; color: var(--accent); font-family: var(--font-mono); margin-bottom: 8px; }
 .hero-title-name { display: block; font-size: 3.5rem; font-weight: 900; line-height: 1.1; background: linear-gradient(135deg, #fff 0%, #a0a0c0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .hero-role { margin-top: 16px; font-family: var(--font-mono); font-size: 1.1rem; color: var(--text-secondary); }
@@ -68,13 +65,6 @@ body:hover .cursor-glow { opacity: 1; }
 .btn-primary:hover::after { transform: translateX(100%); }
 .btn-outline { background: transparent; color: var(--text-primary); border: 1px solid var(--border); }
 .btn-outline:hover { border-color: var(--accent); color: var(--accent); background: var(--glow); transform: translateY(-2px); }
-
-/* Hero Stats */
-.hero-stats { display: flex; gap: 40px; margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
-.stat-item { text-align: center; }
-.stat-number { font-size: 2.2rem; font-weight: 800; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.stat-plus { font-size: 1.5rem; font-weight: 700; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.stat-label { display: block; font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
 
 /* Code Window */
 .code-window { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5); transition: var(--transition); }
@@ -134,8 +124,6 @@ body:hover .cursor-glow { opacity: 1; }
 .skill-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; }
 .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
 .skill-tag { padding: 4px 12px; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.15); border-radius: 20px; font-size: 0.75rem; color: var(--accent); font-weight: 500; }
-.skill-bar { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
-.skill-progress { height: 100%; background: var(--accent-gradient); border-radius: 2px; width: 0; transition: width 1.5s cubic-bezier(0.4,0,0.2,1); }
 
 /* ===== Timeline ===== */
 .timeline { position: relative; max-width: 800px; margin: 0 auto; padding-left: 40px; }
@@ -150,9 +138,6 @@ body:hover .cursor-glow { opacity: 1; }
 .timeline-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; }
 .timeline-card h4 { font-size: 0.95rem; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
 .timeline-date { font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px; margin-bottom: 12px; }
-.timeline-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin-bottom: 16px; }
-.timeline-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-.timeline-tags span { padding: 4px 12px; background: rgba(123,97,255,0.08); border: 1px solid rgba(123,97,255,0.2); border-radius: 20px; font-size: 0.75rem; color: var(--accent-2); font-weight: 500; }
 
 /* ===== Education ===== */
 .education-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -165,8 +150,6 @@ body:hover .cursor-glow { opacity: 1; }
 .edu-score { display: flex; flex-direction: column; align-items: center; gap: 6px; }
 .score-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
 .score-value { font-size: 1.5rem; font-weight: 800; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.score-bar { width: 100%; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; margin-top: 4px; }
-.score-fill { height: 100%; background: var(--accent-gradient); border-radius: 2px; width: 0; transition: width 1.5s cubic-bezier(0.4,0,0.2,1); }
 
 /* ===== Contact ===== */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
@@ -216,7 +199,6 @@ body:hover .cursor-glow { opacity: 1; }
     .hero { grid-template-columns: 1fr; gap: 40px; text-align: center; }
     .hero-description { margin: 24px auto 0; }
     .hero-cta { justify-content: center; }
-    .hero-stats { justify-content: center; }
     .hero-visual { order: -1; }
     .about-grid { grid-template-columns: 1fr; }
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
@@ -231,7 +213,6 @@ body:hover .cursor-glow { opacity: 1; }
     .section-title { font-size: 2rem; }
     .skills-grid { grid-template-columns: 1fr; }
     .education-grid { grid-template-columns: 1fr; }
-    .hero-stats { flex-direction: column; gap: 20px; }
     .about-info-grid { grid-template-columns: 1fr; }
     .tech-orbit { width: 280px; height: 280px; }
     .ring-1 { width: 180px; height: 180px; }
@@ -254,7 +235,6 @@ body:hover .cursor-glow { opacity: 1; }
     .contact-link-item { padding: 12px; }
     .code-window { margin: 0 -10px; }
     .code-body { font-size: 0.75rem; padding: 14px; }
-    .hero-badge { font-size: 0.75rem; }
     .hero-role { font-size: 0.95rem; }
     .hero-description { font-size: 0.95rem; }
     .skill-card { padding: 24px 18px; }
@@ -267,14 +247,11 @@ body:hover .cursor-glow { opacity: 1; }
     .btn { width: 100%; justify-content: center; }
     .container { padding: 0 16px; }
     .section-title { font-size: 1.6rem; }
-    .stat-number { font-size: 1.8rem; }
-    .stat-label { font-size: 0.7rem; }
     .hero-greeting { font-size: 0.95rem; }
     .about-intro { font-size: 1rem; }
     .skill-icon { width: 40px; height: 40px; font-size: 1rem; }
     .skill-card h3 { font-size: 1rem; }
     .skill-tag { font-size: 0.7rem; padding: 3px 10px; }
-    .timeline-tags span { font-size: 0.7rem; }
     .edu-icon { width: 50px; height: 50px; font-size: 1.2rem; }
     .edu-content h3 { font-size: 0.95rem; }
     .score-value { font-size: 1.3rem; }
@@ -439,4 +416,80 @@ body:hover .cursor-glow { opacity: 1; }
     .lab-pre { font-size: 0.75rem; padding: 12px; }
     .lab-table th, .lab-table td { padding: 8px 10px; font-size: 0.75rem; }
     .lab-subtitle { font-size: 0.85rem; }
+}
+
+/* ===== Resume Content Layout (additive, component-scoped) ===== */
+/* Semantic responsibility groups inside the existing timeline cards. */
+.timeline-responsibility-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; }
+.timeline-responsibility-group { min-width: 0; }
+.timeline-responsibility-heading { font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.timeline-responsibility-list { padding-left: 18px; }
+.timeline-responsibility-list li { position: relative; min-width: 0; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; overflow-wrap: anywhere; }
+.timeline-responsibility-list li + li { margin-top: 8px; }
+.timeline-responsibility-list li::before { content: ''; position: absolute; left: -14px; top: 0.7em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+
+/* Employer, location, and date metadata wrap instead of forcing horizontal overflow. */
+.timeline-employer, .timeline-location { overflow-wrap: anywhere; }
+.timeline-date { flex-wrap: wrap; min-width: 0; overflow-wrap: anywhere; }
+
+/* Long technology labels wrap inside the existing auto-flow grids. */
+.skills-grid > .skill-card { min-width: 0; }
+.skill-tag { overflow-wrap: anywhere; }
+
+/* Hero grid children keep the code sample inside its own existing scroll
+   container instead of widening the hero track and the document. */
+.hero > .hero-content, .hero > .hero-visual { min-width: 0; }
+
+/* Contact rows: anchors stay interactive, static rows never imply navigation. */
+.contact-link-item > div:not(.contact-icon) { min-width: 0; }
+.contact-value { overflow-wrap: anywhere; }
+a.contact-link-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+div.contact-link-item { cursor: default; }
+div.contact-link-item:hover { border-color: var(--border); background: var(--bg-card); transform: none; }
+
+@media (max-width: 768px) {
+    .timeline-responsibility-groups { grid-template-columns: 1fr; }
+    .timeline-card:hover { transform: none; }
+    a.contact-link-item:hover { transform: none; }
+}
+@media (max-width: 480px) {
+    /* 0.7rem resolves to 11.2px, below the 12px legibility floor. */
+    .timeline-responsibility-heading { font-size: 0.75rem; }
+    .timeline-responsibility-list li { font-size: 0.85rem; }
+    .skill-tag { font-size: 0.75rem; }
+}
+
+/* ===== Responsive Corrections (additive, component-scoped) ===== */
+/* Found by the responsive device matrix in
+   tests/portfolio-resume-details-update/release-responsive-matrix.js.
+   Each rule reuses the existing 1024px / 768px / 480px breakpoints and existing
+   variables; no layout, typography, or color decision is redesigned. */
+
+/* The decorative orbit rings are rotating squares that carry a circular dashed
+   border. Nothing they paint leaves the container, but the rotated bounding box
+   measures side x sqrt(2) (230px -> 325px), which widened the document past a
+   320px viewport. Clip the horizontal axis only, so the orbit chips still
+   overhang vertically exactly as designed. */
+.about-visual { overflow-x: clip; }
+
+@media (max-width: 1024px) {
+    /* At and below 1024px the hero collapses to one centered column, so the
+       absolutely positioned indicator lands on top of the hero buttons.
+       It was already hidden below 768px; hide it wherever the hero stacks. */
+    .scroll-indicator { display: none; }
+}
+
+@media (max-width: 768px) {
+    /* Touch-layout tap targets: 44x44 CSS px minimum. Sizes grow, positions,
+       colors, and typography do not change. */
+    .nav-toggle { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+    .nav-logo { display: inline-flex; align-items: center; min-height: 44px; }
+    .nav-links .nav-link { display: inline-flex; align-items: center; min-height: 44px; }
+    .footer-nav a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
+    .footer-social a { width: 44px; height: 44px; }
+
+    /* `audio` has a ~300px intrinsic width and no fluid rule, unlike the
+       sibling `video`/`iframe` fixtures above, so it overflowed at 320px. */
+    .lab-media-players audio { width: 100%; }
+    .lab-media img { max-width: 100%; height: auto; }
 }

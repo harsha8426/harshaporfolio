@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/portfolio-resume-details-update/run-release-validation.js",
+    "test:static": "node tests/portfolio-resume-details-update/release-static-check.js",
+    "test:static-negative-control": "node tests/portfolio-resume-details-update/release-static-negative-control.js",
+    "test:browser-smoke": "node tests/portfolio-resume-details-update/release-browser-smoke.js",
+    "test:responsive": "node tests/portfolio-resume-details-update/release-responsive-matrix.js"
   },
   "keywords": [],
   "author": "",
